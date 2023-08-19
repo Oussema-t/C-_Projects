@@ -1,0 +1,36 @@
+#include <iostream>   
+using namespace std ; 
+int main ()
+{ 
+    int zn , sn; 
+    double** matrixptr= 0 ; 
+    
+    cout<<"Geben  Sie bitte die  Zeilen Nummer "<< endl ; 
+cin>> zn ; 
+cout << "Geben Sie  bitte  die Spalten  Nummer "<< endl ; 
+cin>>  sn ;
+matrixptr= new double *[zn];
+if(matrixptr!=0){ 
+for( int i=0 ; i< zn ; i++){ 
+    matrixptr[i]=new double [sn]; 
+}
+}
+for(int i=0;i<zn ; i++){
+    for(int j =0; j<sn; j++){
+        cout<<"Geben  Sie  bitte die["<<i+1<<"]"<<"["<<j+1<<"]" <<endl ; 
+        cin>> matrixptr[i][j]; 
+         
+    }
+}
+
+for(int i=0;i<zn ; i++){
+    for(int j =0; j<sn; j++){
+        cout<< matrixptr[i][j]<< " "; 
+    }
+    
+
+    cout<<"\n"; 
+}
+return 0; 
+} 
+    
